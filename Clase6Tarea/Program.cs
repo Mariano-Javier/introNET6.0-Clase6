@@ -1,19 +1,19 @@
-﻿int numeroSecreto = new Random(DateTime.Now.Millisecond).Next(1, 21); // Genera un numero entero aleatorio de 1 a 20
+﻿int numeroSecreto = new Random(DateTime.Now.Millisecond).Next(1, 21); // Genera un numero entero aleatorio de 1 a 20.
 int contador = 1;
 int num;
 bool verificador;
-int numero=0;
+int numero = 0;
 
 Console.WriteLine("¡Adivine el número secreto generado por la computadora!\n--Ingrese un número del 1 al 20--");
 
 do
 {
     string input = Console.ReadLine();
-    verificador = int.TryParse(input, out num);
+    verificador = int.TryParse(input, out num);  //valida que el input sea un número.
 
     if (verificador)
     {
-        numero = int.Parse(input);
+        numero = int.Parse(input); //convierte el input en int para hacer la comparación.
 
         if (numero < 1 || numero > 20)
         {
